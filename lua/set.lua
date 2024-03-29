@@ -1,6 +1,8 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 
+vim.opt.foldenable = false
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -24,6 +26,7 @@ vim.opt.numberwidth = 5
 vim.opt.updatetime = 50
 
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 
 vim.diagnostic.config({
