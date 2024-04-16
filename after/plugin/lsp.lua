@@ -30,8 +30,10 @@ local on_attach = function(_, bufnr)
 	--require('completion').on_attach()
 end
 local servers = { 'tsserver', 'pyright', 'zls', 'clangd' }
+local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		on_attach = on_attach,
+		capabilities = capabilities,
 	}
 end

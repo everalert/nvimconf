@@ -26,12 +26,19 @@ require('lazy').setup({
 	{ 'nvim-treesitter/nvim-treesitter', 
 		config = function() vim.cmd(':TSUpdate') end,
 	},
-
 	'nvim-treesitter/playground',
 
+	'ziglang/zig.vim',
 	'habamax/vim-godot',
 
-	'ziglang/zig.vim',
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-buffer',
+	'hrsh7th/cmp-path',
+	'hrsh7th/cmp-cmdline',
+	'hrsh7th/cmp-nvim-lsp',
+
+	'L3MON4D3/LuaSnip',
+	'saadparwaiz1/cmp_luasnip',
 
 	{ 'theprimeagen/harpoon',
 		branch = 'harpoon2',
