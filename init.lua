@@ -4,4 +4,4 @@
 require('set')
 require('remap')
 require('visuals')
-require('lazy_config')
+require('lazyconf')
