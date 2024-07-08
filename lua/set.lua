@@ -25,9 +25,6 @@ vim.opt.numberwidth = 5
 
 vim.opt.updatetime = 50
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 
 vim.diagnostic.config({
 	virtual_text = false,

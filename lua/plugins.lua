@@ -13,11 +13,6 @@ return {
 		},
 	},
 
-	{ 'nvim-treesitter/nvim-treesitter', 
-		config = function() vim.cmd(':TSUpdate') end,
-	},
-	'nvim-treesitter/playground',
-
 	'ziglang/zig.vim',
 	'habamax/vim-godot',
 
@@ -48,8 +43,6 @@ return {
 	{ "windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end,
 	},
-
-	'Mofiqul/vscode.nvim',
 
 	{ 'nvim-lualine/lualine.nvim',
 		dependencies = { 
