@@ -1,7 +1,8 @@
 return {
+
 	{ 
 		'nvim-treesitter/nvim-treesitter', 
-		
+
 		config = function() 
 			vim.cmd(':TSUpdate') 
 
@@ -36,10 +37,6 @@ return {
 					additional_vim_regex_highlighting = false,
 				},
 
-				autotag = {
-					enable = true,
-				},
-
 				indent = {
 					enable = true,
 				},
@@ -49,5 +46,5 @@ return {
 	},
 
 	'nvim-treesitter/playground',
-}
 
+}
