@@ -1,7 +1,21 @@
 return {
+	{ 'mason-org/mason.nvim',
+		opts = {
+			PATH = "append",
+			ensure_installed = {
+				"pylsp",
+				"gopls",
+				"zls",
+				"ts_ls",
+				"lua_ls",
+				"clangd",
+			},
+		},
+	},
+
 	'nvim-lua/plenary.nvim',
 
-	'neovim/nvim-lspconfig',
+
 
 	{ 'nvim-telescope/telescope.nvim', 
 		tag = '0.1.4',
@@ -15,6 +29,19 @@ return {
 
 	'ziglang/zig.vim',
 	'habamax/vim-godot',
+
+	{
+		"b0o/blender.nvim",
+		config = function()
+			require("blender").setup()
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"grapp-dev/nui-components.nvim",
+			"mfussenegger/nvim-dap", -- Optional, for debugging with DAP
+			"LiadOz/nvim-dap-repl-highlights", -- Optional, for syntax highlighting in the DAP REPL
+		},	
+	},
 
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-buffer',
