@@ -8,15 +8,13 @@ return {
 
 	opts = {
 		signs = false,
-
 		gui_style = {
 			fg = 'BOLD',
-			bg = 'NONE'
+			bg = 'NONE',
 		},
-		
 		highlight = {
-			keyword = "fg",
+			keyword = "bg",
 			after = ""
-		}
+		},
 	}
 }

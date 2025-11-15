@@ -22,7 +22,14 @@ local servers = {
 	clangd = {}, 
 	gopls = {}, 
 	lua_ls = {}, 
-	ts_ls = {} 
+	ts_ls = {}, 
+	["asm-lsp"] = {
+		cmd = { 'asm-lsp' },
+		filetypes = { 'asm', 's', 'S' },
+		root_markers = { '.git' },
+		single_file_support = true,
+		workspace_required = false,
+	}, 
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

@@ -9,13 +9,12 @@ return {
 				"ts_ls",
 				"lua_ls",
 				"clangd",
+				"asm-lsp",
 			},
 		},
 	},
 
 	'nvim-lua/plenary.nvim',
-
-
 
 	{ 'nvim-telescope/telescope.nvim', 
 		tag = '0.1.4',
@@ -30,8 +29,7 @@ return {
 	'ziglang/zig.vim',
 	'habamax/vim-godot',
 
-	{
-		"b0o/blender.nvim",
+	{ "b0o/blender.nvim",
 		config = function()
 			require("blender").setup()
 		end,
