@@ -3,7 +3,8 @@ vim.o.guifont = "JetBrains Mono NL:h10"
 --vim.g.neovide_transparency = 0.95
 vim.g.neovide_floating_blur = 4.8
 vim.g.neovide_scroll_animation_length = 0.10
-vim.g.neovide_cursor_trail_size = 0.3
+vim.g.neovide_cursor_animation_length = 0.10
+vim.g.neovide_cursor_trail_size = 0.5
 
 vim.g.neovide_refresh_rate = 240
 vim.g.neovide_refresh_rate_idle = 10
