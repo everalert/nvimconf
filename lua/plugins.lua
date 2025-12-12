@@ -10,6 +10,7 @@ return {
 				"lua_ls",
 				"clangd",
 				"asm-lsp",
+				"tinymist",
 			},
 		},
 	},

@@ -23,6 +23,17 @@ local servers = {
 	gopls = {}, 
 	lua_ls = {}, 
 	ts_ls = {}, 
+	tinymist = {
+		cmd = { 'tinymist' },
+		filetypes = { 'typ', 'typst' },
+		settings = {
+			lint = {
+				enabled = true,
+				when = "onSave",
+			},
+			formatterMode = "typstyle",
+		},
+	}, 
 	["asm-lsp"] = {
 		cmd = { 'asm-lsp' },
 		filetypes = { 'asm', 's', 'S' },
@@ -46,6 +57,7 @@ end
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.go", callback = function() vim.lsp.buf.format() end })
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.py", callback = function() vim.lsp.buf.format() end })
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.zig", callback = function() vim.lsp.buf.format() end })
+vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.typ", callback = function() vim.lsp.buf.format() end })
 
 vim.diagnostic.config({
 	virtual_text = true,
