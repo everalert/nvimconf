@@ -58,6 +58,9 @@ vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.go", callback = functi
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.py", callback = function() vim.lsp.buf.format() end })
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.zig", callback = function() vim.lsp.buf.format() end })
 vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.typ", callback = function() vim.lsp.buf.format() end })
+vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*.asm,*.s,*.S", callback = function() 
+	require("conform").format({ formatters = { "x86fmt" }, lsp_format = "fallback" })
+end })
 
 vim.diagnostic.config({
 	virtual_text = true,
